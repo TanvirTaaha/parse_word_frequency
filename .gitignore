@@ -3,3 +3,4 @@ bin
 .idea
 lib
 *.cfg
+/src/stopwords_list_out.txt

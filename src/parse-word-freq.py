@@ -1,7 +1,14 @@
 import urllib.request
 import urllib.error
 import urllib.parse
+import nltk
 from nltk.corpus import stopwords
+
+try:
+    nltk.data.find("corpora/stopwords")
+except LookupError:
+    nltk.download("stopwords")
+
 
 ARTICLE_FILES = {
     "City-Link": [
