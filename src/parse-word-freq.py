@@ -3,12 +3,12 @@ import urllib.error
 import urllib.parse
 import nltk
 from nltk.corpus import stopwords
+import stopwords_list
 
 try:
     nltk.data.find("corpora/stopwords")
 except LookupError:
     nltk.download("stopwords")
-
 
 ARTICLE_FILES = {
     "City-Link": [
@@ -94,3 +94,5 @@ if __name__ == "__main__":
             with open(filepath) as file:
                 text = file.read()
                 print(sortedDictFromText(text))
+
+    stopwords_list.printAll()

@@ -7,7 +7,8 @@ try:
 except LookupError:
     nltk.download("stopwords")
 
-if __name__ == '__main__':
+
+def printAll() -> None:
     with open("stopwords_list_out.txt", "w") as sys.stdout:
         wordlist = list(stopwords.words('english'))
         count = len(wordlist)
@@ -17,3 +18,7 @@ if __name__ == '__main__':
             else:
                 s = ', '
             print(wordlist[i], end=s)
+
+
+if __name__ == '__main__':
+    printAll()
