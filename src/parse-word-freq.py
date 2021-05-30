@@ -91,7 +91,7 @@ if __name__ == "__main__":
         print(company + ": ")
         file_paths = ARTICLE_FILES[company]
         for filepath in file_paths:
-            with open(filepath) as file:
+            with open(filepath, encoding="utf-8") as file:
                 text = file.read()
                 print(sortedDictFromText(text))
 

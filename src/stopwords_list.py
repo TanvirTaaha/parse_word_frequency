@@ -9,7 +9,7 @@ except LookupError:
 
 
 def printAll() -> None:
-    with open("stopwords_list_out.txt", "w") as sys.stdout:
+    with open("stopwords_list_out.txt", "w", encoding="utf-8") as sys.stdout:
         wordlist = list(stopwords.words('english'))
         count = len(wordlist)
         for i in range(0, count):
