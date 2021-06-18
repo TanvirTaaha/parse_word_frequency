@@ -9,6 +9,9 @@ except LookupError:
 
 
 def printAll() -> None:
+    """
+    prints all the stop words in nltk library for english language
+    """
     with open("stopwords_list_out.txt", "w", encoding="utf-8") as sys.stdout:
         wordlist = list(stopwords.words('english'))
         count = len(wordlist)
